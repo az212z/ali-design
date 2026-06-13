@@ -107,6 +107,20 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
 .strip .track{display:inline-flex;animation:mq 32s linear infinite;padding:14px 0}
 .strip span{font-family:var(--en);font-weight:600;font-size:15px;padding:0 26px;display:inline-flex;align-items:center;gap:26px;color:#cdd8f0;letter-spacing:.04em}
 .strip span::after{content:"✦";font-size:9px;color:var(--blue-l)}
+.guar{background:linear-gradient(120deg,var(--blue-d),var(--blue) 52%,var(--blue-l));color:#fff;position:relative;overflow:hidden}
+.guar::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(255,255,255,.18),transparent 45%);pointer-events:none}
+.guar .gin{max-width:1180px;margin:0 auto;padding:clamp(30px,4.6vw,54px) clamp(22px,5vw,44px);display:flex;align-items:center;gap:clamp(22px,4vw,46px);flex-wrap:wrap;position:relative}
+.guar .gic{flex:0 0 auto;width:74px;height:74px;border-radius:22px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 1px rgba(255,255,255,.3)}
+.guar .gic svg{width:38px;height:38px;fill:none;stroke:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.guar .gtx{flex:1 1 440px;min-width:260px}
+.guar .gtag{font-family:var(--en);font-weight:700;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:#e7eeff;display:inline-block;margin-bottom:9px}
+.guar h2{font-family:var(--fa-d);font-weight:800;font-size:clamp(21px,3.3vw,35px);line-height:1.4;margin:0 0 9px;letter-spacing:-.01em;color:#fff}
+.guar h2 b{font-weight:800;background:rgba(255,255,255,.18);padding:1px 11px;border-radius:9px;white-space:nowrap}
+.guar p{font-size:clamp(14px,1.7vw,17px);color:#edf2ff;margin:0;max-width:600px;line-height:1.8}
+.guar .gcta{flex:0 0 auto;display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--blue-d);padding:14px 26px;border-radius:100px;font-family:var(--fa-d);font-weight:800;font-size:15.5px;transition:.4s var(--ease);box-shadow:0 10px 30px rgba(10,30,80,.25)}
+.guar .gcta svg{width:18px;height:18px;fill:var(--blue-d)}
+.guar .gcta:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(10,30,80,.32)}
+@media(max-width:760px){.guar .gin{flex-direction:column;text-align:center}.guar .gtx{flex-basis:auto}.guar p{margin-inline:auto}}
 @keyframes mq{to{transform:translateX(50%)}}
 
 .sec{padding:clamp(70px,9vw,120px) 0}
@@ -273,6 +287,19 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
     </div>
   </div>
 </header>
+
+<!-- GUARANTEE -->
+<section class="guar">
+  <div class="gin">
+    <div class="gic"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+    <div class="gtx">
+      <span class="gtag">ضمان علي</span>
+      <h2>صمّم موقعك أوّلًا، وادفع <b>بعد ما تشوفه ويعجبك</b></h2>
+      <p>أجهّز لك معاينةً حيّةً كاملة لموقعك قبل أي مبلغ. لا تدفع ريالًا حتى تراه بعينك على جوالك ويقنعك.</p>
+    </div>
+    <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%B9%D9%84%D9%8A%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%84%D9%85%D9%88%D9%82%D8%B9%D9%8A%20%D9%82%D8%A8%D9%84%20%D8%A7%D9%84%D8%AF%D9%81%D8%B9" target="_blank" rel="noopener" class="gcta"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>اطلب معاينتك المجانية</a>
+  </div>
+</section>
 
 <div class="strip" aria-hidden="true">
   <div class="track">

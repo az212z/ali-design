@@ -251,6 +251,70 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
   .work-head{flex-direction:column;align-items:stretch}
   .foot-bot{justify-content:center;text-align:center}
 }
+
+/* ===================== PREMIUM MOTION LAYER ===================== */
+/* shimmer gradient text */
+.grad{background:linear-gradient(100deg,var(--blue-l) 0%,#bcd2ff 35%,#fff 50%,#bcd2ff 65%,var(--blue-l) 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:-220% center}}
+@media(prefers-reduced-motion:reduce){.grad{animation:none}.aurora i{animation:none!important}.orbit,.orbit2{animation:none!important}.wa-float{animation:none}}
+
+/* hero aurora blobs */
+.aurora{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.aurora i{position:absolute;border-radius:50%;filter:blur(72px);opacity:.5;mix-blend-mode:screen;will-change:transform}
+.aurora i:nth-child(1){width:480px;height:480px;background:#3b6fe0;top:-12%;right:4%;animation:au1 17s ease-in-out infinite}
+.aurora i:nth-child(2){width:420px;height:420px;background:#6f96ee;bottom:-16%;left:0;animation:au2 21s ease-in-out infinite}
+.aurora i:nth-child(3){width:300px;height:300px;background:#7b5cff;top:34%;left:32%;opacity:.34;animation:au3 24s ease-in-out infinite}
+@keyframes au1{50%{transform:translate(-46px,54px) scale(1.16)}}
+@keyframes au2{50%{transform:translate(54px,-32px) scale(1.12)}}
+@keyframes au3{50%{transform:translate(34px,44px) scale(1.22)}}
+
+/* avatar orbit */
+.hero-av .avatar{position:relative;z-index:2}
+.orbit{position:absolute;inset:-20px;border:1px dashed rgba(111,150,238,.32);border-radius:50%;animation:spin 26s linear infinite;pointer-events:none}
+.orbit::after{content:"";position:absolute;top:-5px;left:50%;margin-left:-5px;width:11px;height:11px;border-radius:50%;background:var(--blue-l);box-shadow:0 0 16px 3px rgba(111,150,238,.9)}
+.orbit2{position:absolute;inset:-7px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0 64%,rgba(111,150,238,.75) 88%,transparent);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));animation:spin 7s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* cursor spotlight on cards */
+.spot{position:relative;isolation:isolate}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;opacity:0;transition:opacity .45s var(--ease);background:radial-gradient(440px circle at var(--mx,50%) var(--my,50%),var(--spot,rgba(59,111,224,.13)),transparent 62%);pointer-events:none;z-index:0}
+.spot:hover::after{opacity:1}
+.svc>*,.pro>*{position:relative;z-index:1}
+.pro.spot::after{--spot:rgba(111,150,238,.2)}
+
+/* 3D tilt previews */
+.work .thumb{transform-style:preserve-3d;will-change:transform;transition:transform .12s var(--ease),box-shadow .5s var(--ease),border-color .5s var(--ease)}
+.work .thumb .shine{position:absolute;inset:0;z-index:3;border-radius:inherit;opacity:0;transition:opacity .4s var(--ease);background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.18),transparent 60%);pointer-events:none}
+.work:hover .thumb .shine{opacity:1}
+
+/* magnetic sheen on primary CTAs */
+.btn-1,.gcta,.cbtn.wa,.ncta{position:relative;overflow:hidden}
+.btn-1::after,.gcta::after,.cbtn.wa::after,.ncta::after{content:"";position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);transition:none}
+.btn-1:hover::after,.gcta:hover::after,.cbtn.wa:hover::after,.ncta:hover::after{animation:sheen .9s var(--ease)}
+@keyframes sheen{to{left:130%}}
+
+/* count flag */
+[data-count]{font-variant-numeric:tabular-nums}
+
+/* RESULTS / WHY band */
+.results{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.results::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:40px 40px;-webkit-mask-image:radial-gradient(ellipse 70% 100% at 50% 0,#000,transparent 75%);mask-image:radial-gradient(ellipse 70% 100% at 50% 0,#000,transparent 75%)}
+.results .wrap{position:relative}
+.rstats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:clamp(34px,5vw,52px)}
+.rstats .rs{background:rgba(255,255,255,.04);border:1px solid var(--wline2);border-radius:18px;padding:26px 22px;text-align:center;transition:.5s var(--ease)}
+.rstats .rs:hover{transform:translateY(-5px);border-color:var(--blue-l);background:rgba(255,255,255,.07)}
+.rstats .rs b{font-family:var(--en);font-weight:700;font-size:clamp(30px,4vw,44px);color:#fff;line-height:1;display:block}
+.rstats .rs b i{color:var(--blue-l);font-style:normal}
+.rstats .rs small{font-size:13.5px;color:rgba(255,255,255,.66);margin-top:8px;display:block}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.whyc{background:rgba(255,255,255,.03);border:1px solid var(--wline2);border-radius:18px;padding:28px 26px;transition:.5s var(--ease)}
+.whyc:hover{transform:translateY(-5px);border-color:var(--blue-l)}
+.whyc .ic{width:50px;height:50px;border-radius:13px;background:rgba(111,150,238,.16);display:grid;place-items:center;margin-bottom:16px}
+.whyc .ic svg{width:26px;height:26px;fill:none;stroke:var(--blue-l);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.whyc h3{font-size:18.5px;color:#fff;font-weight:800}.whyc p{color:rgba(255,255,255,.66);font-size:14px;margin-top:7px;line-height:1.75}
+.results .shead h2{color:#fff}.results .eyebrow{color:var(--blue-l)}.results .shead p{color:rgba(255,255,255,.68)}
+@media(max-width:980px){.rstats{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.rstats{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -279,27 +343,32 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
 
 <!-- HERO -->
 <header class="hero" id="top">
+  <div class="aurora"><i></i><i></i><i></i></div>
   <div class="inner">
     <div class="hero-tx">
       <span class="badge"><span class="dot"></span>متاحٌ الآن · أستقبل مشاريع جديدة</span>
       <h1>أصمّم تجارب رقمية<br>تترك <span class="sig">أثرًا</span></h1>
-      <p class="sub">أنا علي، مصمم UI/UX ومطوّر مواقع عربية بريميوم. أحوّل فكرتك إلى تجربةٍ رقمية أنيقة وسريعة تجذب عملاءك، تبني ثقتهم، وتحوّلهم إلى حجوزات.</p>
+      <p class="sub">أنا علي، مصمم <b style="color:#fff;font-weight:700">UI/UX</b> ومطوّر مواقع عربية بريميوم. لا أصمّم مواقع تُعرض فحسب، بل تجاربَ رقمية أنيقة وسريعة <b style="color:#fff;font-weight:700">تجذب عملاءك وتحوّلهم إلى حجوزات</b>، وتراها مكتملة قبل أن تدفع.</p>
       <div class="hero-act">
         <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%B9%D9%84%D9%8A%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener" class="btn btn-1"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>ابدأ مشروعك الآن</a>
         <a href="#work" class="btn btn-2"><svg viewBox="0 0 24 24"><path d="M14 5l-1.4 1.4 4.6 4.6H4v2h13.2l-4.6 4.6L14 19l7-7z"/></svg>شاهد أعمالي</a>
       </div>
       <div class="hero-stats">
-        <div class="st"><b>+<i>28</i></b><small>موقعًا منشورًا</small></div>
-        <div class="st"><b>100<i>%</i></b><small>تصميم مخصّص</small></div>
+        <div class="st"><b>+<i data-count="28">0</i></b><small>موقعًا منشورًا وحيّ</small></div>
+        <div class="st"><b><i data-count="100">0</i>%</b><small>تصميم مخصّص</small></div>
         <div class="st"><b>RTL</b><small>عربي بريميوم</small></div>
       </div>
     </div>
     <div class="hero-av">
-      <div class="avatar big">
-        <svg class="wire" viewBox="0 0 120 90"><use href="#wire"/></svg>
-        <span class="sig">Ali</span>
-        <span class="role">UI/UX Designer<br>Web Design</span>
-        <span class="ul"></span>
+      <div class="av-orb" style="position:relative;display:grid;place-items:center">
+        <div class="orbit2"></div>
+        <div class="orbit"></div>
+        <div class="avatar big">
+          <svg class="wire" viewBox="0 0 120 90"><use href="#wire"/></svg>
+          <span class="sig">Ali</span>
+          <span class="role">UI/UX Designer<br>Web Design</span>
+          <span class="ul"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -330,6 +399,40 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
   </div>
 </div>
 
+<!-- RESULTS / WHY -->
+<section class="sec results">
+  <div class="wrap">
+    <div class="rstats">
+      <div class="rs rv"><b>+<i data-count="28">0</i></b><small>موقعًا منشورًا وحيًّا</small></div>
+      <div class="rs rv d1"><b><i data-count="5">0</i>+</b><small>قطاعات ومجالات</small></div>
+      <div class="rs rv d2"><b><i data-count="1">0</i> يوم</b><small>أول معاينة سريعة</small></div>
+      <div class="rs rv d3"><b><i data-count="0">0</i></b><small>مخاطرة · شاهد قبل الدفع</small></div>
+    </div>
+    <div class="shead ctr rv">
+      <span class="eyebrow">لماذا تختارني</span>
+      <h2>لا قوالب جاهزة، <span class="grad">بل تصميمٌ يبيع</span></h2>
+      <p>ثلاثة أسبابٍ تجعل موقعك معي استثمارًا يعود عليك، لا مجرّد مصروف.</p>
+    </div>
+    <div class="why-grid">
+      <div class="whyc spot rv">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>تراه قبل أن تدفع</h3>
+        <p>أُجهّز لك نموذجًا حيًّا تتصفّحه على جوالك بلا أي دفعة مقدّمة، وتدفع فقط حين تقتنع تمامًا.</p>
+      </div>
+      <div class="whyc spot rv d1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9 2.2.9-5.5-4-3.9 5.5-.8z"/></svg></div>
+        <h3>هويةٌ تخصّك وحدك</h3>
+        <p>كل موقعٍ أصمّمه بألوانه وخطوطه وتخطيطه المختلف، يعكس شخصية علامتك ويميّزها عن منافسيك.</p>
+      </div>
+      <div class="whyc spot rv d2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
+        <h3>سرعةٌ تتحوّل لمبيعات</h3>
+        <p>كودٌ نظيف وتحميل خاطف وتجربة سلسة على الجوال، مع زر واتساب يحوّل الزائر إلى رسالةٍ أو حجزٍ في ثانية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section class="sec" id="about">
   <div class="wrap about-grid">
@@ -346,9 +449,9 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
       <h2 class="rv d1">مصمم يجمع بين <span>الجمال والوظيفة</span></h2>
       <p class="rv d2">متخصص في تصميم وتطوير مواقع عربية بريميوم بصفحة واحدة (Single Page) للمطاعم والمقاهي، الصالونات والسبا، المكاتب الهندسية، المتاجر والعيادات. أصمّم لكل عميلٍ هويةً بصرية مختلفة، مع حركة ناعمة، تجربة سلسة على الجوال، وربطٍ مباشر بواتساب لتحويل الزوار إلى حجوزات.</p>
       <div class="mini rv d2">
-        <div class="m"><b>+28</b><small>موقع منشور وحيّ</small></div>
-        <div class="m"><b>5+</b><small>مجالات وقطاعات</small></div>
-        <div class="m"><b>1 يوم</b><small>أول معاينة سريعة</small></div>
+        <div class="m"><b>+<span data-count="28">0</span></b><small>موقع منشور وحيّ</small></div>
+        <div class="m"><b><span data-count="5">0</span>+</b><small>مجالات وقطاعات</small></div>
+        <div class="m"><b><span data-count="1">0</span> يوم</b><small>أول معاينة سريعة</small></div>
         <div class="m"><b>∞</b><small>تعديلات حتى الرضا</small></div>
       </div>
     </div>
@@ -436,7 +539,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
   <div class="wrap">
     <div class="shead ctr rv">
       <span class="eyebrow">كيف أعمل</span>
-      <h2>رحلةٌ بسيطة من <span style="color:var(--blue-l)">الفكرة للإطلاق</span></h2>
+      <h2>رحلةٌ بسيطة من <span class="grad">الفكرة للإطلاق</span></h2>
       <p>أربع خطواتٍ واضحة تجعل تجربتك مريحة ونتيجتك مضمونة، دون أي مخاطرة.</p>
     </div>
     <div class="proc-grid">
@@ -453,7 +556,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
   <div class="wrap">
     <div class="contact-card rv">
       <span class="eyebrow">تواصل معي</span>
-      <h2>جاهز لموقعٍ <span>يليق بك؟</span></h2>
+      <h2>جاهز لموقعٍ <span class="grad">يليق بك؟</span></h2>
       <p>أرسل لي فكرتك على واتساب الآن، وسأجهّز لك نموذجًا لموقعك تراه قبل أي التزام. خطوةٌ واحدة تفصلك عن حضورٍ رقمي يجذب عملاءك ويقنعهم بالجودة.</p>
       <div class="contact-act">
         <a class="cbtn wa" href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%B9%D9%84%D9%8A%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>راسلني على واتساب</a>
@@ -557,6 +660,45 @@ var CATLBL={spa:'سبا',eng:'هندسي',shop:'متجر',decor:'ديكور'};
   function safety(){var vh=window.innerHeight;document.querySelectorAll('.rv').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<vh*0.97)reveal(el)})}
   window.addEventListener('scroll',safety,{passive:true});window.addEventListener('load',safety);setTimeout(safety,300);setTimeout(safety,1400);
   setTimeout(function(){document.querySelectorAll('.rv').forEach(function(el){el.style.transition='none';el.classList.add('in');el.style.opacity='1';el.style.transform='none';el.style.filter='none';});},3000);
+})();
+/* ===== motion layer: counters · spotlight · tilt ===== */
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  // count-up
+  function animate(el){
+    var t=parseFloat(el.getAttribute('data-count'))||0;
+    if(reduce){el.textContent=t;return;}
+    var dur=1500,start=null;
+    function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1);var e=1-Math.pow(1-p,3);el.textContent=Math.round(t*e);if(p<1)requestAnimationFrame(step);else el.textContent=t;}
+    requestAnimationFrame(step);
+  }
+  var seen=new WeakSet();
+  if('IntersectionObserver' in window){
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!seen.has(e.target)){seen.add(e.target);animate(e.target);cio.unobserve(e.target);}})},{threshold:.4});
+    document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
+  }else{document.querySelectorAll('[data-count]').forEach(function(el){el.textContent=el.getAttribute('data-count')});}
+  // cursor spotlight on cards
+  document.querySelectorAll('.svc,.pro').forEach(function(c){c.classList.add('spot')});
+  if(!reduce && matchMedia('(pointer:fine)').matches){
+    document.querySelectorAll('.spot').forEach(function(c){
+      c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});
+    });
+    // 3D tilt on live previews
+    function tilt(){
+      document.querySelectorAll('.work').forEach(function(card){
+        if(card.dataset.tb)return;card.dataset.tb='1';
+        var t=card.querySelector('.thumb');if(!t)return;
+        var sh=document.createElement('div');sh.className='shine';t.appendChild(sh);
+        card.addEventListener('pointermove',function(e){
+          var r=t.getBoundingClientRect();var px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
+          t.style.transform='perspective(820px) rotateX('+((0.5-py)*7).toFixed(2)+'deg) rotateY('+((px-0.5)*9).toFixed(2)+'deg) translateY(-6px)';
+          t.style.setProperty('--mx',(px*100)+'%');t.style.setProperty('--my',(py*100)+'%');
+        });
+        card.addEventListener('pointerleave',function(){t.style.transform='';});
+      });
+    }
+    tilt();setTimeout(tilt,300);setTimeout(tilt,1200);
+  }
 })();
 </script>
 </body>

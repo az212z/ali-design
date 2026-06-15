@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Ali · تصميم وتطوير مواقع UI/UX</title>
-<meta name="description" content="استوديو Ali لتصميم وتطوير مواقع عربية بريميوم بواجهات UI/UX سريعة وأنيقة. معرض حيّ لأكثر من ٢٨ موقعًا. تشاهد موقعك قبل أن تدفع.">
-<meta property="og:title" content="Ali · UI/UX & Web Design">
-<meta property="og:description" content="نصمّم مواقع عربية تبيع. شاهد موقعك قبل أن تدفع.">
+<title>Ali · استوديو فل‑ستاك لتصميم وتطوير المواقع والأنظمة</title>
+<meta name="description" content="استوديو Ali فل‑ستاك: تصميم UI/UX، تطوير مواقع ومتاجر، وأنظمة حجوزات ووكلاء ذكاء اصطناعي ومنصّات SaaS. معرض حيّ لأكثر من ٢٨ موقعًا. تشاهد عملك قبل أن تدفع.">
+<meta property="og:title" content="Ali · Full-Stack Web Studio">
+<meta property="og:description" content="تصميم · تطوير · أنظمة. شاهد عملك قبل أن تدفع.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#ffffff; --bg2:#f6f7fa; --bg3:#eef0f5; --dark:#0c0f16; --dark2:#141925;
-  --ink:#0c0f16; --ink2:#586173; --ink3:#9aa2b1;
+  --bg:#ffffff; --bg2:#f6f7fa; --bg3:#eef0f5; --dark:#0b0e14; --dark2:#141925;
+  --ink:#0b0e14; --ink2:#586173; --ink3:#9aa2b1;
   --acc:#2f5bea; --acc-d:#2247c4; --acc-l:#6f90f5; --acc-soft:#e9eefc;
   --line:#e7e9f0; --line2:#f0f1f6;
   --wline:rgba(255,255,255,.12); --wline2:rgba(255,255,255,.06);
@@ -25,7 +25,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--fa);line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 ::selection{background:var(--acc);color:#fff}
 img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing:-.02em}
+h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.16;letter-spacing:-.02em}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
 .en{font-family:var(--en)}.mono{font-family:var(--mono)}
 .lbl{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--acc);text-transform:uppercase}
@@ -45,7 +45,7 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
 .brand{font-family:var(--en);font-weight:700;font-size:21px;letter-spacing:.02em;display:inline-flex;align-items:center;gap:8px}
 .brand b{color:var(--acc);font-weight:700}
 .nav-links{display:flex;gap:2px}
-.nav-links a{font-size:14.5px;color:var(--ink2);padding:8px 14px;border-radius:8px;transition:.25s var(--ease);font-weight:500}
+.nav-links a{font-size:14.5px;color:var(--ink2);padding:8px 13px;border-radius:8px;transition:.25s var(--ease);font-weight:500}
 .nav-links a:hover{color:var(--ink);background:var(--bg2)}
 #nav.shrink{background:rgba(255,255,255,.8);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid var(--line2)}
 #nav.shrink .nbar{padding-top:13px;padding-bottom:13px}
@@ -56,34 +56,35 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
 .burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
 .burger.x span:nth-child(1){top:22px;transform:rotate(45deg)}.burger.x span:nth-child(2){opacity:0}.burger.x span:nth-child(3){top:22px;transform:rotate(-45deg)}
 
-#mob{position:fixed;inset:0;z-index:6400;background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:0;visibility:hidden;transition:.5s var(--ease)}
+#mob{position:fixed;inset:0;z-index:6400;background:rgba(255,255,255,.97);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;visibility:hidden;transition:.5s var(--ease)}
 #mob.open{opacity:1;visibility:visible}
-#mob a{font-family:var(--fa-d);font-weight:800;font-size:28px;color:var(--ink);opacity:0;transform:translateY(16px);transition:.5s var(--ease)}
+#mob a{font-family:var(--fa-d);font-weight:800;font-size:26px;color:var(--ink);opacity:0;transform:translateY(16px);transition:.5s var(--ease)}
 #mob a:hover{color:var(--acc)}
 #mob.open a{opacity:1;transform:none}
-#mob.open a:nth-child(1){transition-delay:.05s}#mob.open a:nth-child(2){transition-delay:.1s}#mob.open a:nth-child(3){transition-delay:.15s}#mob.open a:nth-child(4){transition-delay:.2s}#mob.open a:nth-child(5){transition-delay:.25s}
+#mob.open a:nth-child(1){transition-delay:.05s}#mob.open a:nth-child(2){transition-delay:.1s}#mob.open a:nth-child(3){transition-delay:.15s}#mob.open a:nth-child(4){transition-delay:.2s}#mob.open a:nth-child(5){transition-delay:.25s}#mob.open a:nth-child(6){transition-delay:.3s}
 
 .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
 
 /* HERO */
-.hero{position:relative;padding:148px 0 80px;overflow:hidden}
+.hero{position:relative;padding:150px 0 76px;overflow:hidden}
 .hero::before{content:"";position:absolute;top:-15%;left:-10%;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,var(--acc-soft),transparent 64%);pointer-events:none;animation:floaty 16s ease-in-out infinite}
 @keyframes floaty{50%{transform:translate(40px,40px) scale(1.12)}}
-.hero .inner{position:relative;z-index:2;max-width:920px}
+.hero .inner{position:relative;z-index:2;max-width:940px}
 .chip{display:inline-flex;align-items:center;gap:9px;background:var(--bg2);border:1px solid var(--line);border-radius:100px;padding:7px 15px;font-size:13px;font-weight:500;color:var(--ink2)}
 .chip .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.16);animation:dotp 2s ease-in-out infinite}
 @keyframes dotp{50%{box-shadow:0 0 0 7px rgba(34,197,94,0)}}
-.hero h1{font-size:clamp(40px,7.4vw,88px);font-weight:900;line-height:1.06;margin:22px 0 0;letter-spacing:-.03em}
+.hero h1{font-size:clamp(42px,7.6vw,92px);font-weight:900;line-height:1.05;margin:22px 0 0;letter-spacing:-.03em}
 .hero h1 .ac{color:var(--acc)}
-.hero .sub{font-size:clamp(16px,2.1vw,20px);color:var(--ink2);max-width:48ch;margin-top:20px}
+.hero .sub{font-size:clamp(16px,2.1vw,20px);color:var(--ink2);max-width:50ch;margin-top:20px}
+.hero .sub b{color:var(--ink);font-weight:700}
 .hero-act{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:100px;font-weight:700;font-size:15.5px;transition:.35s var(--ease);position:relative;overflow:hidden}
 .btn svg{width:18px;height:18px}
 .btn-1{background:#25d366;color:#06351a}.btn-1 svg{fill:#06351a}.btn-1:hover{transform:translateY(-2px);box-shadow:0 16px 32px -14px rgba(37,211,102,.5)}
 .btn-2{background:var(--ink);color:#fff}.btn-2 svg{fill:#fff}.btn-2:hover{transform:translateY(-2px);background:var(--acc)}
-.hero-meta{display:flex;align-items:center;gap:28px;margin-top:40px;flex-wrap:wrap}
+.hero-meta{display:flex;align-items:center;gap:26px;margin-top:40px;flex-wrap:wrap}
 .stat b{font-family:var(--en);font-weight:700;font-size:26px;display:block;line-height:1}
 .stat b i{color:var(--acc);font-style:normal}
 .stat small{font-size:12.5px;color:var(--ink2)}
@@ -96,18 +97,34 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
 .verif b{font-family:var(--fa-d);font-weight:800;font-size:12.5px;color:#15803d;display:block;line-height:1.25}
 .verif small{font-family:var(--mono);font-size:11px;color:#3f9c5e;direction:ltr;display:block}
 
-.mq{border-block:1px solid var(--line2);background:var(--bg2);overflow:hidden;white-space:nowrap}
-.mq .tk{display:inline-flex;animation:mq 30s linear infinite;padding:13px 0}
-.mq span{font-family:var(--mono);font-size:13px;color:var(--ink2);padding:0 24px;display:inline-flex;align-items:center;gap:24px}
-.mq span::after{content:"✦";font-size:8px;color:var(--acc)}
+/* TECH STRIP */
+.tech{border-block:1px solid var(--line2);background:var(--dark);overflow:hidden;white-space:nowrap}
+.tech .tk{display:inline-flex;animation:mq 36s linear infinite;padding:15px 0}
+.tech span{font-family:var(--mono);font-size:13.5px;color:rgba(255,255,255,.62);padding:0 22px;display:inline-flex;align-items:center;gap:22px}
+.tech span::after{content:"/";color:var(--acc-l);font-weight:700}
+.tech span.hl{color:#fff}
 @keyframes mq{to{transform:translateX(50%)}}
 
-.sec{padding:clamp(70px,9vw,110px) 0}
+.sec{padding:clamp(70px,9vw,108px) 0}
 .shead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(34px,4vw,50px)}
-.shead .tx{max-width:620px}
+.shead .tx{max-width:640px}
 .shead h2{font-size:clamp(28px,4.4vw,48px);margin:10px 0 0;letter-spacing:-.02em}
 .shead h2 .ac{color:var(--acc)}
 .shead p{color:var(--ink2);font-size:16px;margin-top:10px}
+
+/* CAPABILITIES */
+.caps{background:var(--bg2)}
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cap{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:32px 28px;transition:.4s var(--ease)}
+.cap:hover{transform:translateY(-4px);box-shadow:0 30px 54px -42px rgba(11,14,20,.4);border-color:var(--acc-l)}
+.cap .ci{display:flex;align-items:center;gap:13px;margin-bottom:18px}
+.cap .ic{width:48px;height:48px;border-radius:13px;background:var(--acc-soft);display:grid;place-items:center;flex:0 0 auto}
+.cap .ic svg{width:24px;height:24px;fill:none;stroke:var(--acc);stroke-width:1.8}
+.cap h3{font-size:21px;font-weight:800}
+.cap .ci small{font-family:var(--mono);font-size:11px;color:var(--ink3);display:block}
+.cap ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:4px}
+.cap li{display:flex;align-items:center;gap:10px;font-size:14.5px;color:var(--ink2)}
+.cap li svg{width:17px;height:17px;flex:0 0 auto;fill:none;stroke:var(--acc);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
 
 /* WORK */
 .filters{display:flex;gap:8px;flex-wrap:wrap}
@@ -115,29 +132,36 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
 .filters button:hover{border-color:var(--acc-l);color:var(--acc)}
 .filters button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.work{display:block}
-.work.hide{display:none}
+.work{display:block}.work.hide{display:none}
 .work .thumb{position:relative;aspect-ratio:16/11;overflow:hidden;border-radius:14px;border:1px solid var(--line);background:var(--bg2);transition:transform .14s var(--ease),box-shadow .45s var(--ease),border-color .45s var(--ease);transform-style:preserve-3d}
 .work .thumb iframe{position:absolute;top:0;right:0;width:1320px;height:907px;border:0;transform:scale(.408);transform-origin:top right;pointer-events:none;background:#fff}
-.work .thumb .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,15,22,.72),transparent 52%);opacity:0;transition:.4s var(--ease);display:flex;align-items:flex-end;padding:16px}
+.work .thumb .ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,14,20,.72),transparent 52%);opacity:0;transition:.4s var(--ease);display:flex;align-items:flex-end;padding:16px}
 .work .thumb .ov .v{color:#fff;font-weight:700;font-size:14px;display:inline-flex;align-items:center;gap:7px;transform:translateY(6px);transition:.4s var(--ease)}
 .work .thumb .ov .v svg{width:15px;height:15px;fill:#fff}
 .work .thumb .sh{position:absolute;inset:0;background:radial-gradient(220px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.12),transparent 60%);opacity:0;transition:.4s;pointer-events:none}
-.work:hover .thumb{border-color:var(--acc-l);box-shadow:0 30px 50px -36px rgba(12,15,22,.4)}
+.work:hover .thumb{border-color:var(--acc-l);box-shadow:0 30px 50px -36px rgba(11,14,20,.4)}
 .work:hover .thumb .ov{opacity:1}.work:hover .thumb .ov .v{transform:none}.work:hover .thumb .sh{opacity:1}
 .work .meta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px}
 .work .meta b{font-family:var(--fa-d);font-weight:700;font-size:16px}
 .work .meta span{font-size:12.5px;color:var(--ink3)}
 .work .meta .cat{font-family:var(--mono);font-size:10.5px;color:var(--acc);background:var(--acc-soft);padding:4px 10px;border-radius:100px}
 
-/* SERVICES */
-.services{background:var(--bg2)}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.svc{background:var(--bg);padding:30px 26px;transition:.4s var(--ease)}
-.svc:hover{background:#fff;transform:translateY(-3px);box-shadow:0 26px 44px -38px rgba(12,15,22,.35)}
-.svc .ic{width:46px;height:46px;border-radius:12px;background:var(--acc-soft);display:grid;place-items:center;margin-bottom:16px}
-.svc .ic svg{width:23px;height:23px;fill:none;stroke:var(--acc);stroke-width:1.8}
-.svc h3{font-size:18px;font-weight:700}.svc p{color:var(--ink2);font-size:14px;margin-top:6px}
+/* PACKAGES */
+.pkg{background:var(--bg2)}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.pk{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:32px 28px;display:flex;flex-direction:column;transition:.4s var(--ease);position:relative}
+.pk:hover{transform:translateY(-4px);box-shadow:0 30px 54px -42px rgba(11,14,20,.4)}
+.pk.hot{border-color:var(--acc);box-shadow:0 30px 60px -40px rgba(47,91,234,.4)}
+.pk .badge{position:absolute;top:-12px;right:24px;font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--acc);padding:5px 13px;border-radius:100px}
+.pk .pn{font-family:var(--mono);font-size:12px;color:var(--acc)}
+.pk h3{font-size:23px;font-weight:800;margin-top:6px}
+.pk .pd{color:var(--ink2);font-size:14px;margin-top:6px;min-height:42px}
+.pk ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin:20px 0;flex:1}
+.pk li{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--ink)}
+.pk li svg{width:16px;height:16px;flex:0 0 auto;fill:none;stroke:var(--acc);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.pk a{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px;border-radius:100px;font-weight:700;font-size:14.5px;transition:.35s var(--ease);border:1px solid var(--line);color:var(--ink)}
+.pk a:hover{border-color:var(--acc);color:var(--acc)}
+.pk.hot a{background:var(--acc);color:#fff;border-color:var(--acc)}.pk.hot a:hover{background:var(--acc-d);color:#fff}
 
 /* PROCESS */
 .proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
@@ -146,12 +170,11 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
 .pc .n{font-family:var(--mono);font-size:13px;color:var(--acc);font-weight:700}
 .pc h3{font-size:18px;font-weight:700;margin-top:10px}.pc p{color:var(--ink2);font-size:13.5px;margin-top:6px}
 
-/* GUARANTEE band */
+/* GUARANTEE */
 .guar{background:var(--dark);color:#fff;position:relative;overflow:hidden}
 .guar::after{content:"";position:absolute;top:-40%;left:-6%;width:440px;height:440px;background:radial-gradient(circle,rgba(47,91,234,.4),transparent 64%);pointer-events:none}
 .guar .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-top:clamp(46px,6vw,66px);padding-bottom:clamp(46px,6vw,66px)}
-.guar .tx{max-width:560px}
-.guar .lbl{color:var(--acc-l)}
+.guar .tx{max-width:560px}.guar .lbl{color:var(--acc-l)}
 .guar h2{color:#fff;font-size:clamp(26px,3.8vw,42px);margin-top:12px}
 .guar p{color:rgba(255,255,255,.7);font-size:16px;margin-top:10px}
 .guar a{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--dark);padding:15px 26px;border-radius:100px;font-weight:700;font-size:15.5px;transition:.35s var(--ease);flex:0 0 auto}
@@ -181,14 +204,14 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
 @media(prefers-reduced-motion:reduce){*{animation-duration:.001s!important}}
 @media(max-width:980px){
   .nav-links{display:none}.burger{display:block}
+  .cap-grid{grid-template-columns:1fr}
   .work-grid{grid-template-columns:repeat(2,1fr)}
-  .svc-grid{grid-template-columns:1fr 1fr}
+  .pkg-grid{grid-template-columns:1fr}
   .proc-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:600px){
   .wrap{padding:0 20px}.hero{padding-top:128px}.nbar{padding:15px 20px}
   .work-grid{grid-template-columns:1fr}
-  .svc-grid{grid-template-columns:1fr}
   .proc-grid{grid-template-columns:1fr}
   .hero-act,.cact{flex-direction:column}.btn,.cbtn{justify-content:center}
   .hero-meta{gap:18px}.vdiv{display:none}
@@ -205,8 +228,9 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
   <div class="nbar">
     <a href="#top" class="brand">Ali<b>.</b></a>
     <nav class="nav-links">
+      <a href="#caps">الإمكانات</a>
       <a href="#work">الأعمال</a>
-      <a href="#services">الخدمات</a>
+      <a href="#packages">الباقات</a>
       <a href="#process">آلية العمل</a>
       <a href="#contact">تواصل</a>
     </nav>
@@ -216,7 +240,7 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
 </header>
 
 <nav id="mob">
-  <a href="#work">الأعمال</a><a href="#services">الخدمات</a><a href="#process">آلية العمل</a><a href="#contact">تواصل</a>
+  <a href="#caps">الإمكانات</a><a href="#work">الأعمال</a><a href="#packages">الباقات</a><a href="#process">آلية العمل</a><a href="#contact">تواصل</a>
   <a href="https://wa.me/966505989304" target="_blank" rel="noopener" style="color:var(--acc)">واتساب</a>
 </nav>
 
@@ -225,16 +249,16 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
   <div class="wrap">
     <div class="inner">
       <span class="chip rv"><span class="dot"></span>متاح للعمل · نستقبل مشاريع جديدة</span>
-      <h1 class="rv d1">نصمّم مواقع عربية <span class="ac">تبيع.</span></h1>
-      <p class="sub rv d2">تصميم وتطوير واجهات UI/UX سريعة وأنيقة، تشاهد موقعك مكتملًا قبل أن تدفع.</p>
+      <h1 class="rv d1">نصمّم، نبرمج، <span class="ac">نُطلق.</span></h1>
+      <p class="sub rv d2">استوديو فل‑ستاك: تصميم <b>UI/UX</b>، تطوير مواقع ومتاجر، وأنظمة حجوزات ووكلاء ذكاء اصطناعي ومنصّات <b>SaaS</b>. وتشاهد عملك قبل أن تدفع.</p>
       <div class="hero-act rv d2">
-        <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener" class="btn btn-1"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>ابدأ مشروعك</a>
+        <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B4%D8%B1%D9%88%D8%B9" target="_blank" rel="noopener" class="btn btn-1"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>ابدأ مشروعك</a>
         <a href="#work" class="btn btn-2"><svg viewBox="0 0 24 24"><path d="M14 5l-1.4 1.4 4.6 4.6H4v2h13.2l-4.6 4.6L14 19l7-7z"/></svg>شاهد الأعمال</a>
       </div>
       <div class="hero-meta rv d3">
         <div class="stat"><b>+<i data-count="28">0</i></b><small>موقع منشور</small></div>
         <div class="vdiv"></div>
-        <div class="stat"><b><i data-count="5">0</i>+</b><small>قطاعات</small></div>
+        <div class="stat"><b>Full</b><small>تصميم · تطوير · أنظمة</small></div>
         <div class="vdiv"></div>
         <div class="verif">
           <span class="vk"><svg viewBox="0 0 24 24"><path class="sh" d="M12 2.2l8 3v6c0 4.9-3.4 8.5-8 10.8-4.6-2.3-8-5.9-8-10.8v-6z"/><path d="M8.4 12.2l2.6 2.6 4.9-5.1"/></svg></span>
@@ -245,12 +269,50 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
   </div>
 </header>
 
-<div class="mq" aria-hidden="true">
+<div class="tech" aria-hidden="true">
   <div class="tk">
-    <span>UI/UX</span><span>WEB DESIGN</span><span>RTL عربي</span><span>تطوير</span><span>هوية بصرية</span><span>Motion</span><span>Responsive</span><span>SEO</span>
-    <span>UI/UX</span><span>WEB DESIGN</span><span>RTL عربي</span><span>تطوير</span><span>هوية بصرية</span><span>Motion</span><span>Responsive</span><span>SEO</span>
+    <span class="hl">Figma</span><span>UI/UX</span><span class="hl">HTML</span><span class="hl">CSS</span><span class="hl">JavaScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Supabase</span><span>Tailwind</span><span>REST API</span><span>RTL</span>
+    <span class="hl">Figma</span><span>UI/UX</span><span class="hl">HTML</span><span class="hl">CSS</span><span class="hl">JavaScript</span><span>React</span><span>Next.js</span><span>Node.js</span><span>Supabase</span><span>Tailwind</span><span>REST API</span><span>RTL</span>
   </div>
 </div>
+
+<!-- CAPABILITIES -->
+<section class="sec caps" id="caps">
+  <div class="wrap">
+    <div class="shead">
+      <div class="tx rv"><span class="lbl">الإمكانات</span><h2>ثلاث طبقات، <span class="ac">فريقٌ واحد</span></h2><p>من أول بكسل في التصميم حتى آخر سطرٍ في الكود، وكل شيء بينهما.</p></div>
+    </div>
+    <div class="cap-grid">
+      <div class="cap rv">
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 19l7-7a4 4 0 0 0-5.7-5.7l-1.3 1.3-1.3-1.3A4 4 0 0 0 5 12z"/></svg></div><div><h3>التصميم</h3><small>DESIGN</small></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>واجهات وتجربة UI/UX</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>هوية بصرية وشعار</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>تصميم RTL عربي</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>حركة وموشن</li>
+        </ul>
+      </div>
+      <div class="cap rv d1">
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg></div><div><h3>التطوير</h3><small>DEVELOP</small></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>مواقع ومتاجر سريعة</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>كود نظيف ومتجاوب</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>أداء عالٍ و SEO</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>ربط واتساب ودفع</li>
+        </ul>
+      </div>
+      <div class="cap rv d2">
+        <div class="ci"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 14h4M7 17h7"/></svg></div><div><h3>الأنظمة</h3><small>SYSTEMS</small></div></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>أنظمة حجوزات وإدارة</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>وكلاء ذكاء اصطناعي</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>منصّات SaaS سحابية</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>لوحات تحكّم وتقارير</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- WORK -->
 <section class="sec" id="work">
@@ -259,7 +321,7 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
       <div class="tx rv">
         <span class="lbl">المعرض</span>
         <h2>أعمال <span class="ac">حيّة</span></h2>
-        <p>أكثر من ٢٨ موقعًا حقيقيًا. اضغط أيّ موقع لتتصفّحه مباشرة.</p>
+        <p>أكثر من ٢٨ موقعًا منشورًا. اضغط أيّ موقع لتتصفّحه مباشرة.</p>
       </div>
       <div class="filters rv d1">
         <button class="on" data-f="all">الكل</button>
@@ -273,19 +335,44 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="sec services" id="services">
+<!-- PACKAGES -->
+<section class="sec pkg" id="packages">
   <div class="wrap">
     <div class="shead">
-      <div class="tx rv"><span class="lbl">الخدمات</span><h2>ما <span class="ac">نقدّمه</span></h2></div>
+      <div class="tx rv"><span class="lbl">الباقات</span><h2>اختر ما يناسب <span class="ac">نشاطك</span></h2><p>من موقعٍ تعريفي أنيق إلى نظامٍ متكامل ينمو معك.</p></div>
     </div>
-    <div class="svc-grid">
-      <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 22h8M12 18v4"/></svg></div><h3>تصميم UI/UX</h3><p>واجهات وتجربة استخدام واضحة.</p></div>
-      <div class="svc rv d1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6M13 4l-2 16"/></svg></div><h3>تطوير المواقع</h3><p>كودٌ نظيف وسريع بصفحة واحدة.</p></div>
-      <div class="svc rv d2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10c-3 0-5-1-5-4s2-3-5-6z"/></svg></div><h3>الهوية والشعار</h3><p>هويةٌ بصرية تُميّزك.</p></div>
-      <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="14" height="10" rx="1.5"/><rect x="16" y="8" width="6" height="12" rx="1.5"/></svg></div><h3>متجاوب بالكامل</h3><p>تجربة مثالية على كل جهاز.</p></div>
-      <div class="svc rv d1"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div><h3>سرعة و SEO</h3><p>تحميلٌ خاطف وتهيئة للبحث.</p></div>
-      <div class="svc rv d2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg></div><h3>ربط واتساب</h3><p>زرّ تواصل يحوّل الزائر لعميل.</p></div>
+    <div class="pkg-grid">
+      <div class="pk rv">
+        <span class="pn">01</span><h3>موقع تعريفي</h3>
+        <p class="pd">حضورٌ رقمي أنيق يعرّف بنشاطك ويجذب عملاءك.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>تصميم وهوية مخصّصة</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>صفحة واحدة RTL متجاوبة</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>ربط واتساب و SEO</li>
+        </ul>
+        <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%85%D9%88%D9%82%D8%B9%20%D8%AA%D8%B9%D8%B1%D9%8A%D9%81%D9%8A" target="_blank" rel="noopener">اطلب عرض سعر</a>
+      </div>
+      <div class="pk hot rv d1">
+        <span class="badge">الأكثر طلبًا</span>
+        <span class="pn">02</span><h3>موقع + حجوزات</h3>
+        <p class="pd">موقعٌ متكامل يستقبل الطلبات والحجوزات تلقائيًا.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>كل مزايا الباقة الأولى</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>نظام حجوزات أو طلبات</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>تأكيدات وتذكيرات آلية</li>
+        </ul>
+        <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%85%D9%88%D9%82%D8%B9%20%2B%20%D8%AD%D8%AC%D9%88%D8%B2%D8%A7%D8%AA" target="_blank" rel="noopener">اطلب عرض سعر</a>
+      </div>
+      <div class="pk rv d2">
+        <span class="pn">03</span><h3>نظام / SaaS</h3>
+        <p class="pd">منصّة سحابية متكاملة قابلة للتوسّع تُدير نشاطك بالكامل.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>لوحة تحكّم وصلاحيات</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>وكيل ذكاء اصطناعي</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>اشتراكات وتقارير</li>
+        </ul>
+        <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A8%D8%A7%D9%82%D8%A9%20%D9%86%D8%B8%D8%A7%D9%85%20SaaS" target="_blank" rel="noopener">اطلب عرض سعر</a>
+      </div>
     </div>
   </div>
 </section>
@@ -297,9 +384,9 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
       <div class="tx rv"><span class="lbl">آلية العمل</span><h2>من الفكرة <span class="ac">للإطلاق</span></h2></div>
     </div>
     <div class="proc-grid">
-      <div class="pc rv"><div class="n">01</div><h3>الفهم</h3><p>نفهم نشاطك وجمهورك.</p></div>
+      <div class="pc rv"><div class="n">01</div><h3>الفهم</h3><p>نفهم نشاطك وأهدافك.</p></div>
       <div class="pc rv d1"><div class="n">02</div><h3>التصميم</h3><p>نُصمّم ونُرسل لك معاينة حيّة.</p></div>
-      <div class="pc rv d2"><div class="n">03</div><h3>التطوير</h3><p>نبنيه سريعًا ومتجاوبًا.</p></div>
+      <div class="pc rv d2"><div class="n">03</div><h3>التطوير</h3><p>نبرمجه سريعًا وآمنًا.</p></div>
       <div class="pc rv d3"><div class="n">04</div><h3>الإطلاق</h3><p>ننشره مع تعديلاتٍ حتى الرضا.</p></div>
     </div>
   </div>
@@ -310,7 +397,7 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
   <div class="wrap">
     <div class="tx">
       <span class="lbl">ضمان بلا مخاطرة</span>
-      <h2>شاهد موقعك قبل أن تدفع</h2>
+      <h2>شاهد عملك قبل أن تدفع</h2>
       <p>نُجهّز لك نموذجًا حيًّا تتصفّحه على جوالك، بلا دفعة مقدّمة.</p>
     </div>
     <a href="https://wa.me/966505989304?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>اطلب نموذجك المجاني</a>
@@ -324,7 +411,7 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
     <h2 class="rv d1">جاهز للبدء<span class="ac">؟</span></h2>
     <p class="rv d2">أرسل فكرتك، ونرجع لك بنموذجٍ تراه قبل أي التزام.</p>
     <div class="cact rv d2">
-      <a class="cbtn wa" href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>واتساب</a>
+      <a class="cbtn wa" href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B4%D8%B1%D9%88%D8%B9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>واتساب</a>
       <a class="cbtn tt" href="https://www.tiktok.com/@ali.design02" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v13.4a2.6 2.6 0 1 1-2.6-2.6c.27 0 .53.04.78.12V8.5a6 6 0 0 0-.78-.06A5.96 5.96 0 1 0 15.7 14.4V8.9a7.5 7.5 0 0 0 4.4 1.4V7a4.3 4.3 0 0 1-3.5-1.2z"/></svg>تيك توك</a>
     </div>
     <div class="chand rv d2">wa.me/966505989304 · @ali.design02</div>
@@ -334,7 +421,7 @@ h1,h2,h3{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spacing
 <footer class="foot">
   <div class="wrap">
     <small>© 2026 Ali · جميع الحقوق محفوظة</small>
-    <small class="en">Ali · UI/UX &amp; Web Design</small>
+    <small class="en">Ali · Full-Stack Web Studio</small>
   </div>
 </footer>
 

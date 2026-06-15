@@ -315,6 +315,25 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
 .results .shead h2{color:#fff}.results .eyebrow{color:var(--blue-l)}.results .shead p{color:rgba(255,255,255,.68)}
 @media(max-width:980px){.rstats{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.rstats{grid-template-columns:1fr 1fr}}
+
+/* verified freelance badge */
+.vouch{display:inline-flex;align-items:center;gap:11px;background:rgba(255,255,255,.05);border:1px solid var(--wline2);border-radius:100px;padding:7px 18px 7px 8px;position:relative;overflow:hidden;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.vouch::after{content:"";position:absolute;top:0;left:-140%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.22),transparent);transform:skewX(-18deg);animation:vsheen 5s ease-in-out infinite}
+@keyframes vsheen{0%,62%{left:-140%}82%,100%{left:140%}}
+.vseal{position:relative;width:36px;height:36px;flex:0 0 auto;display:grid;place-items:center}
+.vseal::before{content:"";position:absolute;inset:-2px;border-radius:50%;background:radial-gradient(circle,rgba(74,222,128,.45),transparent 68%);animation:vpulse 2.6s ease-in-out infinite}
+@keyframes vpulse{0%,100%{transform:scale(.76);opacity:.4}50%{transform:scale(1.18);opacity:.95}}
+.vk{width:33px;height:33px;position:relative;z-index:1;animation:vpop 2.6s ease-in-out infinite}
+@keyframes vpop{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.vk .vsh{fill:rgba(74,222,128,.18);stroke:#4ade80;stroke-width:1.4}
+.vk .vck{fill:none;stroke:#4ade80;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.vtx{line-height:1.25}
+.vtx b{display:block;font-family:var(--fa-d);font-weight:800;font-size:13px;color:#fff}
+.vtx small{display:block;font-family:var(--en);font-size:11px;letter-spacing:.04em;color:#9fe6bd;margin-top:1px;direction:ltr;text-align:right}
+.fverify{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:12.5px;color:#9fe6bd}
+.fverify svg{width:16px;height:16px;fill:none;stroke:#4ade80;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.fverify .en{color:rgba(255,255,255,.5)}
+@media(prefers-reduced-motion:reduce){.vouch::after,.vseal::before,.vk{animation:none}}
 </style>
 </head>
 <body>
@@ -327,10 +346,10 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
   <div class="nbar">
     <a href="#top" class="brand"><span><span class="nm">Ali</span><span class="tg">UI/UX · Web Design</span></span></a>
     <div class="nav-links">
-      <a href="#about">عني</a>
-      <a href="#services">خدماتي</a>
-      <a href="#work">أعمالي</a>
-      <a href="#process">كيف أعمل</a>
+      <a href="#about">نبذة</a>
+      <a href="#services">الخدمات</a>
+      <a href="#work">الأعمال</a>
+      <a href="#process">آلية العمل</a>
       <a href="#contact">تواصل</a>
     </div>
     <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%B9%D9%84%D9%8A%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener" class="ncta"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>راسلني واتساب</a>
@@ -338,7 +357,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
 </nav>
 
 <div id="mob">
-  <a href="#about">عني</a><a href="#services">خدماتي</a><a href="#work">أعمالي</a><a href="#process">كيف أعمل</a><a href="#contact">تواصل</a>
+  <a href="#about">نبذة</a><a href="#services">الخدمات</a><a href="#work">الأعمال</a><a href="#process">آلية العمل</a><a href="#contact">تواصل</a>
 </div>
 
 <!-- HERO -->
@@ -346,9 +365,9 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
   <div class="aurora"><i></i><i></i><i></i></div>
   <div class="inner">
     <div class="hero-tx">
-      <span class="badge"><span class="dot"></span>متاحٌ الآن · أستقبل مشاريع جديدة</span>
-      <h1>أصمّم تجارب رقمية<br>تترك <span class="sig">أثرًا</span></h1>
-      <p class="sub">أنا علي، مصمم <b style="color:#fff;font-weight:700">UI/UX</b> ومطوّر مواقع عربية بريميوم. لا أصمّم مواقع تُعرض فحسب، بل تجاربَ رقمية أنيقة وسريعة <b style="color:#fff;font-weight:700">تجذب عملاءك وتحوّلهم إلى حجوزات</b>، وتراها مكتملة قبل أن تدفع.</p>
+      <span class="badge"><span class="dot"></span>متاحٌ الآن · نستقبل مشاريع جديدة</span>
+      <h1>نُصمّم تجارب رقمية<br>تترك <span class="sig">أثرًا</span></h1>
+      <p class="sub">تصميم وتطوير مواقع عربية بريميوم بواجهات <b style="color:#fff;font-weight:700">UI/UX</b> راقية. ليست مواقع تُعرض فحسب، بل تجاربُ رقمية أنيقة وسريعة <b style="color:#fff;font-weight:700">تجذب عملاءك وتحوّلهم إلى حجوزات</b>، وتراها مكتملة قبل أن تدفع.</p>
       <div class="hero-act">
         <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%B9%D9%84%D9%8A%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener" class="btn btn-1"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>ابدأ مشروعك الآن</a>
         <a href="#work" class="btn btn-2"><svg viewBox="0 0 24 24"><path d="M14 5l-1.4 1.4 4.6 4.6H4v2h13.2l-4.6 4.6L14 19l7-7z"/></svg>شاهد أعمالي</a>
@@ -357,6 +376,10 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
         <div class="st"><b>+<i data-count="28">0</i></b><small>موقعًا منشورًا وحيّ</small></div>
         <div class="st"><b><i data-count="100">0</i>%</b><small>تصميم مخصّص</small></div>
         <div class="st"><b>RTL</b><small>عربي بريميوم</small></div>
+      </div>
+      <div class="vouch rv d2" style="margin-top:24px" title="موثّق في منصة العمل الحر">
+        <span class="vseal"><svg class="vk" viewBox="0 0 24 24"><path class="vsh" d="M12 2.2l8 3v6c0 4.9-3.4 8.5-8 10.8-4.6-2.3-8-5.9-8-10.8v-6z"/><path class="vck" d="M8.4 12.2l2.6 2.6 4.9-5.1"/></svg></span>
+        <span class="vtx"><b>موثّق في منصّة العمل الحر</b><small>FL-854983277</small></span>
       </div>
     </div>
     <div class="hero-av">
@@ -422,7 +445,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
       <div class="whyc spot rv d1">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 21l-4.9 2.2.9-5.5-4-3.9 5.5-.8z"/></svg></div>
         <h3>هويةٌ تخصّك وحدك</h3>
-        <p>كل موقعٍ أصمّمه بألوانه وخطوطه وتخطيطه المختلف، يعكس شخصية علامتك ويميّزها عن منافسيك.</p>
+        <p>كل موقعٍ يُصمَّم بألوانه وخطوطه وتخطيطه المختلف، يعكس شخصية علامتك ويميّزها عن منافسيك.</p>
       </div>
       <div class="whyc spot rv d2">
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 10-12h-7z"/></svg></div>
@@ -441,13 +464,13 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
         <div class="avatar sm"><span class="sig">Ali</span></div>
         <h3>علي<small>UI/UX &amp; Web Designer</small></h3>
       </div>
-      <p class="ql">«أؤمن أن الموقع الجميل ليس شكلاً فقط، بل تجربةٌ تبني الثقة وتحوّل الزائر إلى عميل. لذلك أهتمّ بكل تفصيل: من أول انطباع حتى زر الحجز.»</p>
+      <p class="ql">«الموقع الناجح ليس شكلاً جميلاً فحسب، بل تجربةٌ تبني الثقة وتحوّل الزائر إلى عميل؛ لذلك نهتمّ بكل تفصيل، من أول انطباع حتى زر الحجز.»</p>
       <div class="tags"><span>Figma</span><span>HTML / CSS / JS</span><span>تصميم RTL</span><span>Motion</span><span>Responsive</span><span>SEO</span><span>هوية بصرية</span></div>
     </div>
     <div class="about-tx">
-      <span class="eyebrow rv">من أنا</span>
-      <h2 class="rv d1">مصمم يجمع بين <span>الجمال والوظيفة</span></h2>
-      <p class="rv d2">متخصص في تصميم وتطوير مواقع عربية بريميوم بصفحة واحدة (Single Page) للمطاعم والمقاهي، الصالونات والسبا، المكاتب الهندسية، المتاجر والعيادات. أصمّم لكل عميلٍ هويةً بصرية مختلفة، مع حركة ناعمة، تجربة سلسة على الجوال، وربطٍ مباشر بواتساب لتحويل الزوار إلى حجوزات.</p>
+      <span class="eyebrow rv">نبذة عن الخدمة</span>
+      <h2 class="rv d1">تصميمٌ يجمع بين <span>الجمال والوظيفة</span></h2>
+      <p class="rv d2">تصميم وتطوير مواقع عربية بريميوم بصفحة واحدة (Single Page) للمطاعم والمقاهي، الصالونات والسبا، المكاتب الهندسية، المتاجر والعيادات؛ بهويةٍ بصرية مختلفة لكل عميل، وحركةٍ ناعمة، وتجربةٍ سلسة على الجوال، وربطٍ مباشر بواتساب يحوّل الزوّار إلى حجوزات.</p>
       <div class="mini rv d2">
         <div class="m"><b>+<span data-count="28">0</span></b><small>موقع منشور وحيّ</small></div>
         <div class="m"><b><span data-count="5">0</span>+</b><small>مجالات وقطاعات</small></div>
@@ -464,7 +487,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
     <div class="shead ctr rv">
       <span class="eyebrow">خدماتي</span>
       <h2>كل ما يحتاجه <span>حضورك الرقمي</span></h2>
-      <p>من تصميم موقعك الأنيق حتى أنظمة الحجوزات ووكلاء الذكاء الاصطناعي، أبني لك حلًّا رقميًّا متكاملًا يليق بعلامتك التجارية.</p>
+      <p>من تصميم موقعك الأنيق حتى أنظمة الحجوزات ووكلاء الذكاء الاصطناعي، نبني لك حلًّا رقميًّا متكاملًا يليق بعلامتك التجارية.</p>
     </div>
     <div class="svc-grid">
       <div class="svc rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 22h8M12 18v4"/></svg></div><h3>تصميم UI/UX</h3><p>واجهات وتجربة استخدام مدروسة تجعل التنقّل سهلاً والقرار أسرع.</p></div>
@@ -485,7 +508,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
         <span class="pbadge">AI Agents</span>
         <div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V4M9 12h.01M15 12h.01M9 16h6M2 12h2M20 12h2"/></svg></div>
         <h3>وكلاء ذكاء اصطناعي</h3>
-        <p>أصمّم لك وكيلًا ذكيًّا يردّ على عملائك، يجاوب أسئلتهم، ويحجز المواعيد تلقائيًّا على مدار الساعة، فلا تفوتك أي فرصة بيع.</p>
+        <p>نصمّم لك وكيلًا ذكيًّا يردّ على عملائك، يجاوب أسئلتهم، ويحجز المواعيد تلقائيًّا على مدار الساعة، فلا تفوتك أي فرصة بيع.</p>
         <div class="feats"><span>ردّ تلقائي ٢٤/٧</span><span>حجز ذكي</span><span>ربط واتساب</span></div>
       </div>
       <div class="pro rv d1">
@@ -506,7 +529,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
         <span class="pbadge">SaaS</span>
         <div class="ic"><svg viewBox="0 0 24 24"><path d="M7 17a4 4 0 0 1-.5-7.97A6 6 0 0 1 18 9a3.5 3.5 0 0 1 .5 6.96"/><path d="M12 12v7M9 16l3 3 3-3"/></svg></div>
         <h3>تصميم وتطوير خدمات SaaS</h3>
-        <p>منصّات اشتراك سحابية متعددة المستأجرين (multi-tenant) جاهزة للنمو، أبنيها من قاعدة البيانات حتى الواجهة بأمانٍ وأداء عالٍ.</p>
+        <p>منصّات اشتراك سحابية متعددة المستأجرين (multi-tenant) جاهزة للنمو، نبنيها من قاعدة البيانات حتى الواجهة بأمانٍ وأداء عالٍ.</p>
         <div class="feats"><span>Multi-tenant</span><span>اشتراكات</span><span>قابلة للتوسّع</span></div>
       </div>
     </div>
@@ -520,7 +543,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
       <div class="shead rv" style="margin-bottom:0">
         <span class="eyebrow">أعمالي</span>
         <h2>معرضٌ <span>حيّ</span> لمشاريعي</h2>
-        <p>أكثر من ٢٨ معاينةً مباشرة لمواقع حقيقية صمّمتها وأطلقتها بنفسي. اضغط أي موقع لتتصفّحه على الهواء.</p>
+        <p>أكثر من ٢٨ معاينةً مباشرة لمواقع حقيقية صمّمناها وأطلقناها بأيدينا. اضغط أي موقع لتتصفّحه على الهواء.</p>
       </div>
       <div class="filters rv d1">
         <button class="on" data-f="all">الكل</button>
@@ -543,10 +566,10 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
       <p>أربع خطواتٍ واضحة تجعل تجربتك مريحة ونتيجتك مضمونة، دون أي مخاطرة.</p>
     </div>
     <div class="proc-grid">
-      <div class="pc rv"><div class="n">01</div><h3>الفهم</h3><p>نتحدّث عن نشاطك وجمهورك وما يميّزك، وأجمع صورك ومعلوماتك بدقّة.</p></div>
-      <div class="pc rv d1"><div class="n">02</div><h3>التصميم والمعاينة</h3><p>أصمّم لك هويةً وتخطيطًا خاصًّا بك، وأرسل لك نموذجًا حيًّا تشاهده قبل أي دفعة.</p></div>
-      <div class="pc rv d2"><div class="n">03</div><h3>التطوير</h3><p>أبني الموقع بكودٍ نظيف وسريع، متجاوبٍ على كل الأجهزة ومربوطٍ بواتساب.</p></div>
-      <div class="pc rv d3"><div class="n">04</div><h3>الإطلاق</h3><p>أنشر الموقع وأسلّمه جاهزًا للعمل، مع تعديلاتٍ حتى رضاك التام.</p></div>
+      <div class="pc rv"><div class="n">01</div><h3>الفهم</h3><p>نتحدّث عن نشاطك وجمهورك وما يميّزك، ونجمع صورك ومعلوماتك بدقّة.</p></div>
+      <div class="pc rv d1"><div class="n">02</div><h3>التصميم والمعاينة</h3><p>نصمّم لك هويةً وتخطيطًا خاصًّا بك، ونرسل لك نموذجًا حيًّا تشاهده قبل أي دفعة.</p></div>
+      <div class="pc rv d2"><div class="n">03</div><h3>التطوير</h3><p>نبني الموقع بكودٍ نظيف وسريع، متجاوبٍ على كل الأجهزة ومربوطٍ بواتساب.</p></div>
+      <div class="pc rv d3"><div class="n">04</div><h3>الإطلاق</h3><p>ننشر الموقع ونسلّمه جاهزًا للعمل، مع تعديلاتٍ حتى رضاك التام.</p></div>
     </div>
   </div>
 </section>
@@ -557,7 +580,7 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
     <div class="contact-card rv">
       <span class="eyebrow">تواصل معي</span>
       <h2>جاهز لموقعٍ <span class="grad">يليق بك؟</span></h2>
-      <p>أرسل لي فكرتك على واتساب الآن، وسأجهّز لك نموذجًا لموقعك تراه قبل أي التزام. خطوةٌ واحدة تفصلك عن حضورٍ رقمي يجذب عملاءك ويقنعهم بالجودة.</p>
+      <p>أرسل فكرتك على واتساب الآن، ونجهّز لك نموذجًا لموقعك تراه قبل أي التزام. خطوةٌ واحدة تفصلك عن حضورٍ رقمي يجذب عملاءك ويقنعهم بالجودة.</p>
       <div class="contact-act">
         <a class="cbtn wa" href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D8%B9%D9%84%D9%8A%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg>راسلني على واتساب</a>
         <a class="cbtn tt" href="https://www.tiktok.com/@ali.design02" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.3v13.4a2.6 2.6 0 1 1-2.6-2.6c.27 0 .53.04.78.12V8.5a6 6 0 0 0-.78-.06A5.96 5.96 0 1 0 15.7 14.4V8.9a7.5 7.5 0 0 0 4.4 1.4V7a4.3 4.3 0 0 1-3.5-1.2z"/></svg>تابعني على تيك توك</a>
@@ -573,7 +596,8 @@ h1,h2,h3,h4{font-family:var(--fa-d);font-weight:800;line-height:1.18;letter-spac
     <div class="foot-top">
       <div>
         <a href="#top" class="brand"><span class="nm">Ali</span></a>
-        <p>مصمم UI/UX ومطوّر مواقع عربية بريميوم. أصمّم حضورًا رقميًا يجذب ويقنع.</p>
+        <p>تصميم وتطوير مواقع عربية بريميوم. حضورٌ رقمي يجذب عملاءك ويقنعهم بالجودة.</p>
+        <span class="fverify"><svg viewBox="0 0 24 24"><path d="M12 2.2l8 3v6c0 4.9-3.4 8.5-8 10.8-4.6-2.3-8-5.9-8-10.8v-6z"/><path d="M8.4 12.2l2.6 2.6 4.9-5.1"/></svg>موثّق في منصّة العمل الحر <span class="en">· FL-854983277</span></span>
       </div>
       <div class="foot-links">
         <a href="https://wa.me/966505989304" target="_blank" rel="noopener" aria-label="واتساب"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.8 11.8 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.8 11.8 0 0 1 8.4 3.48 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.06 24zM6.6 20.2c1.65.98 3.23 1.56 5.45 1.56 5.45 0 9.9-4.43 9.9-9.88 0-5.46-4.43-9.9-9.9-9.9-5.46 0-9.89 4.44-9.89 9.9 0 2.33.68 4.07 1.83 5.9l-.99 3.62 3.6-.95z"/></svg></a>

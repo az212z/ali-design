@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>علي · تصميم وتطوير مواقع ومتاجر إلكترونية | Ali</title>
-<meta name="description" content="علي · مصمّم ومطوّر سعودي لمواقع ومتاجر إلكترونية وأنظمة حجز بهوية احترافية تزيد مبيعاتك. أكثر من 200 عمل منشور. تصفّح أعمالي واطلب موقعك.">
+<meta name="description" content="علي · مصمّم ومطوّر سعودي لمواقع وأنظمة وخدمات رقمية بهوية بصرية واضحة تقوّي علامتك. أكثر من 200 عمل منشور. تصفّح أعمالي واطلب موقعك.">
 <meta name="theme-color" content="#0a0b12">
 <meta property="og:title" content="علي · تصميم وتطوير مواقع ومتاجر إلكترونية">
-<meta property="og:description" content="مصمّم ومطوّر سعودي. مواقع ومتاجر وأنظمة حجز بهوية احترافية تزيد مبيعاتك. أكثر من 200 عمل منشور.">
+<meta property="og:description" content="مصمّم ومطوّر سعودي. مواقع وأنظمة وخدمات رقمية بهوية بصرية واضحة تقوّي علامتك. أكثر من 200 عمل منشور.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
@@ -86,6 +86,46 @@ img{display:block;max-width:100%}a{color:inherit;text-decoration:none}
 .hmeta{display:flex;gap:42px;margin-top:54px;flex-wrap:wrap;opacity:0;animation:fade .9s var(--ease) .7s forwards}
 .hmeta .n{font-family:'Plus Jakarta Sans';font-weight:800;font-size:2.4rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1}
 .hmeta .t{font-size:.86rem;color:var(--mut);margin-top:6px}
+
+/* hero animated device (computer power-on showing design + code) */
+.hgrid{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center;width:100%}
+.hdevice{position:relative;z-index:2}
+.dev-glow{position:absolute;inset:-14% -4% 4% -4%;background:radial-gradient(58% 58% at 50% 42%,rgba(77,124,255,.32),transparent 72%);filter:blur(18px);z-index:0;animation:devpulse 5s ease-in-out infinite}
+@keyframes devpulse{0%,100%{opacity:.65}50%{opacity:1}}
+.monitor{position:relative;z-index:1;animation:floatM 6s ease-in-out infinite}
+@keyframes floatM{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.screen{position:relative;background:#0b0d16;border:1px solid var(--line2);border-radius:14px;padding:9px;box-shadow:0 34px 64px -26px rgba(0,0,0,.85),inset 0 0 0 1px rgba(255,255,255,.03);overflow:hidden;transform-origin:center bottom;animation:screenOn 1.25s var(--ease) .3s both}
+@keyframes screenOn{0%{transform:scaleY(.03);filter:brightness(4);opacity:0}10%{opacity:1}26%{transform:scaleY(1.05);filter:brightness(2.3)}55%{transform:scaleY(.99);filter:brightness(1.15)}100%{transform:scaleY(1);filter:brightness(1)}}
+.screen::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.05),transparent 14%);pointer-events:none;mix-blend-mode:overlay}
+.scan{position:absolute;inset-inline:0;height:38%;top:-40%;background:linear-gradient(rgba(122,160,255,0),rgba(122,160,255,.07),rgba(122,160,255,0));z-index:3;pointer-events:none;animation:scan 5.5s linear infinite 1.6s}
+@keyframes scan{0%{top:-40%}60%,100%{top:120%}}
+.sbar{display:flex;gap:6px;padding:3px 4px 9px}
+.sbar span{width:10px;height:10px;border-radius:50%}
+.sbar span:nth-child(1){background:#ff5f57}.sbar span:nth-child(2){background:#febc2e}.sbar span:nth-child(3){background:#28c840}
+.sbody{display:grid;grid-template-columns:1.12fr .88fr;gap:9px;height:228px;opacity:0;animation:fade .7s ease 1.2s both}
+.code{background:#080a12;border:1px solid var(--line);border-radius:9px;padding:13px 13px;font-family:'SF Mono',ui-monospace,Menlo,Consolas,monospace;font-size:.71rem;line-height:1.95;overflow:hidden;direction:ltr;text-align:left}
+.cl{white-space:nowrap;overflow:hidden;width:0;animation:type 8s steps(36) infinite}
+.cl:nth-child(1){animation-delay:1.3s}.cl:nth-child(2){animation-delay:1.6s}.cl:nth-child(3){animation-delay:1.95s}.cl:nth-child(4){animation-delay:2.3s}.cl:nth-child(5){animation-delay:2.6s}
+@keyframes type{0%{width:0}11%{width:100%}86%{width:100%}100%{width:0}}
+.code .k{color:#7aa0ff}.code .s{color:#e7bd78}.code .f{color:#6ee7b7}.code .c{color:#565c74}.code .p{color:#e879a6}
+.caret{display:inline-block;width:6px;height:12px;background:var(--cobalt2);vertical-align:-1px;animation:blink 1.05s steps(1) infinite;margin-inline-start:3px}
+@keyframes blink{50%{opacity:0}}
+.design{position:relative;background:#0d1020;border:1px solid var(--line);border-radius:9px;padding:9px;overflow:hidden;display:flex;flex-direction:column;gap:7px}
+.design::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 32%,rgba(255,255,255,.09) 50%,transparent 68%);transform:translateX(120%);animation:shine 4s ease-in-out infinite 1.8s}
+@keyframes shine{0%{transform:translateX(120%)}55%,100%{transform:translateX(-120%)}}
+.d-hero{height:50px;border-radius:6px;background:linear-gradient(120deg,var(--cobalt),var(--gold));background-size:160% 160%;animation:dh 4.5s ease infinite}
+@keyframes dh{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+.d-line{height:7px;border-radius:4px;background:rgba(255,255,255,.16)}
+.d-line.s{width:62%}
+.d-cards{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:1px}
+.d-card{height:40px;border-radius:6px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.neck{width:58px;height:13px;background:linear-gradient(#2a2f45,#171b29);margin:0 auto;border-radius:0 0 4px 4px}
+.base{width:138px;height:9px;background:#1c2030;margin:1px auto 0;border-radius:50%;box-shadow:0 9px 22px -7px rgba(0,0,0,.75)}
+.fchip{position:absolute;z-index:3;background:rgba(18,20,35,.94);border:1px solid var(--line2);border-radius:12px;padding:8px 12px;backdrop-filter:blur(8px);box-shadow:0 18px 38px -18px rgba(0,0,0,.85);display:flex;align-items:center;gap:7px;font-size:.74rem;font-weight:700;color:var(--txt2)}
+.fchip.palette{top:-16px;inset-inline-start:-12px;animation:floatA 5s ease-in-out infinite}
+.fchip.palette i{width:13px;height:13px;border-radius:4px;display:block}
+.fchip.codet{bottom:34px;inset-inline-end:-14px;animation:floatA 5.6s ease-in-out infinite .7s;font-family:'SF Mono',monospace;color:var(--cobalt2)}
+@keyframes floatA{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-12px) rotate(1.5deg)}}
 
 .rv{opacity:0;transform:translateY(42px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .rv.in{opacity:1;transform:none}
@@ -187,8 +227,9 @@ footer .cp{font-size:.82rem;color:var(--dim);border-top:1px solid var(--line);pa
 @keyframes wp{0%{transform:scale(1);opacity:.5}70%,100%{transform:scale(1.85);opacity:0}}
 .wa:hover{transform:scale(1.1)}.wa svg{width:30px;height:30px;fill:#fff}
 
-@media(prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1!important;transform:none!important}.hero h1 .line i,.hero .sub,.hact,.hmeta{opacity:1!important;transform:none!important}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}.rv{opacity:1!important;transform:none!important}.hero h1 .line i,.hero .sub,.hact,.hmeta{opacity:1!important;transform:none!important}.sbody{opacity:1!important}.cl{width:auto!important}.screen{transform:none!important;filter:none!important}}
 @media(max-width:1000px){.why,.proc{grid-template-columns:repeat(2,1fr)}.sgrid,.pgrid,.cpk{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:920px){.hgrid{grid-template-columns:1fr;gap:40px}.hdevice{order:2;max-width:480px;margin-inline:auto;width:100%}.hero{padding-top:108px}}
 @media(max-width:760px){
   .menu{position:fixed;inset-block:0 auto;top:0;inset-inline-end:0;height:100vh;width:80%;max-width:330px;background:var(--bg2);flex-direction:column;justify-content:center;gap:30px;transform:translateX(-110%);transition:.45s;box-shadow:var(--shadow);z-index:950;border-inline-start:1px solid var(--line)}
   .menu.open{transform:none}.burger{display:flex}
@@ -216,14 +257,15 @@ footer .cp{font-size:.82rem;color:var(--dim);border-top:1px solid var(--line);pa
   <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
 </div></nav>
 
-<header class="hero" id="top"><div class="wrap">
+<header class="hero" id="top"><div class="wrap"><div class="hgrid">
+ <div class="hcopy">
   <span class="hchip"><span class="pulse"></span>مصمّم ومطوّر مواقع · أعمل لكل مدن السعودية</span>
   <h1>
-    <span class="line l1"><i>أصمّم مواقع ومتاجر</i></span>
-    <span class="line l2"><i class="gr">تُبرز علامتك</i></span>
-    <span class="line l3"><i style="font-size:.62em;font-weight:700;color:var(--txt2)">وتزيد مبيعاتك.</i></span>
+    <span class="line l1"><i>أصمّم مواقع وأنظمة</i></span>
+    <span class="line l2"><i class="gr">تُبرز هويتك</i></span>
+    <span class="line l3"><i style="font-size:.62em;font-weight:700;color:var(--txt2)">وتقوّي علامتك.</i></span>
   </h1>
-  <p class="sub">علي · مصمّم ومطوّر سعودي. أبني لك موقعاً أو متجراً إلكترونياً أو نظام حجز بهوية خاصة وتجربة سلسة، تكسب ثقة عميلك وتحوّله إلى عملية بيع.</p>
+  <p class="sub">علي · مصمّم ومطوّر سعودي. أبني لك موقعاً أو نظاماً أو خدمة رقمية بهوية خاصة وتجربة سلسة، تمنحك حضوراً بصرياً واضحاً يزيد من قوة علامتك.</p>
   <div class="hact">
     <a href="#work" class="btn btn-1">تصفّح أعمالي</a>
     <a href="https://wa.me/966505989304?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9" class="btn btn-2">اطلب موقعك</a>
@@ -234,7 +276,36 @@ footer .cp{font-size:.82rem;color:var(--dim);border-top:1px solid var(--line);pa
     <div><div class="n" data-count="10" data-suf="">0</div><div class="t">مجالات مختلفة</div></div>
     <div><div class="n" data-count="100" data-suf="%">0</div><div class="t">متوافق مع الجوال</div></div>
   </div>
-</div></header>
+ </div>
+ <div class="hdevice">
+   <div class="dev-glow"></div>
+   <div class="fchip palette"><i style="background:#4d7cff"></i><i style="background:#e7bd78"></i><i style="background:#6ee7b7"></i><span>هوية</span></div>
+   <div class="fchip codet">&lt;/&gt; build</div>
+   <div class="monitor">
+     <div class="screen">
+       <div class="sbar"><span></span><span></span><span></span></div>
+       <div class="sbody">
+         <div class="code">
+           <div class="cl"><span class="c">// هوية بصرية واضحة</span></div>
+           <div class="cl"><span class="k">const</span> brand = {</div>
+           <div class="cl">  name: <span class="s">"Ali"</span>,</div>
+           <div class="cl">  style: <span class="s">"premium"</span></div>
+           <div class="cl">};<span class="caret"></span></div>
+         </div>
+         <div class="design">
+           <div class="d-hero"></div>
+           <div class="d-line"></div>
+           <div class="d-line s"></div>
+           <div class="d-cards"><div class="d-card"></div><div class="d-card"></div></div>
+         </div>
+       </div>
+       <div class="scan"></div>
+     </div>
+     <div class="neck"></div>
+     <div class="base"></div>
+   </div>
+ </div>
+</div></div></header>
 
 <div class="mq"><div class="row" id="mqrow">
   <span>كافيهات</span><span>سبا وصالونات</span><span>ورد وهدايا</span><span>ديكور داخلي</span><span>هندسة ومقاولات</span><span>حلويات ومطاعم</span><span>عبايات ومحلات</span><span>عيادات</span><span>أنظمة وSaaS</span><span>متاجر سلة</span>
@@ -242,17 +313,17 @@ footer .cp{font-size:.82rem;color:var(--dim);border-top:1px solid var(--line);pa
 </div></div>
 
 <section id="why"><div class="wrap">
-  <div class="shead rv"><span class="ey">لماذا تختارني</span><h2>تصميم يبني الثقة <span class="gr">ويزيد البيع</span></h2><p>اهتمام بالتفاصيل، وتجربة تترجم زيارة عميلك إلى طلب فعلي.</p></div>
+  <div class="shead rv"><span class="ey">لماذا تختارني</span><h2>هوية بصرية واضحة <span class="gr">تُقوّي علامتك</span></h2><p>اهتمام بالتفاصيل، وحضور متكامل يجعل علامتك تُذكر وتتميّز عن غيرها.</p></div>
   <div class="why">
     <div class="wc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>تراه قبل أن تدفع</h3><p>أُسلّمك معاينة حيّة كاملة على جوالك. تعتمدها وأنت مرتاح، وبعدها فقط ندفع.</p></div>
     <div class="wc rv d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5L12 3Z"/></svg></div><h3>تصميم خاص بك</h3><p>هوية مفصّلة على نشاطك بألوان وخطوط وتفاصيل تليق بعلامتك، لا قوالب جاهزة مكرّرة.</p></div>
-    <div class="wc rv d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></svg></div><h3>موجّه للبيع</h3><p>كل قسم وكل زر مدروس ليقود زائرك بسلاسة نحو الطلب أو التواصل معك.</p></div>
+    <div class="wc rv d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></svg></div><h3>حضور يُميّزك</h3><p>كل تفصيلة تعكس احترافية علامتك وتترك انطباعاً يدوم لدى زائرك.</p></div>
     <div class="wc rv d3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div><h3>سريع ومتوافق</h3><p>يفتح بسرعة، يعمل على كل جهاز، ومهيّأ ليظهر في نتائج بحث Google.</p></div>
   </div>
 </div></section>
 
 <section id="services" class="srv"><div class="wrap">
-  <div class="shead rv"><span class="ey">خدماتي</span><h2>كل ما يحتاجه مشروعك <span class="gr">في مكان واحد</span></h2><p>من الفكرة إلى منتج رقمي جاهز يخدم نشاطك ويزيد عملاءك.</p></div>
+  <div class="shead rv"><span class="ey">خدماتي</span><h2>كل ما يحتاجه مشروعك <span class="gr">في مكان واحد</span></h2><p>من الفكرة إلى منتج رقمي جاهز يخدم نشاطك ويقوّي حضورك.</p></div>
   <div class="sgrid">
     <div class="scard rv"><div class="no en">01</div><h3>مواقع تعريفية</h3><p>موقع احترافي يعرّف بنشاطك، يبني ثقة عميلك، ويستقبل طلباته مباشرة عبر واتساب.</p><div class="tags"><span>تصميم خاص</span><span>متجاوب</span><span>SEO</span><span>سرعة</span></div></div>
     <div class="scard rv d1"><div class="no en">02</div><h3>متاجر إلكترونية وسلة</h3><p>متجر إلكتروني أو قالب سلة مخصّص بهويتك، جاهز للبيع وربط الدفع والشحن.</p><div class="tags"><span>سلة</span><span>قوالب</span><span>تجارة</span></div></div>

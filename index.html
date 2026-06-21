@@ -153,6 +153,38 @@ section{position:relative;z-index:2;padding:122px 0}
 .wc h3{font-size:1.18rem;margin-bottom:8px}
 .wc p{color:var(--mut);font-size:.95rem}
 
+/* why — split heading + divided list */
+.whyx{display:grid;grid-template-columns:.82fr 1.18fr;gap:62px;align-items:start}
+.whyhead{position:sticky;top:108px}
+.whyhead h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:14px}
+.whyhead p{color:var(--mut);font-size:1.06rem;max-width:32ch}
+.whylist{list-style:none}
+.whylist li{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;padding:30px 0;border-top:1px solid var(--line)}
+.whylist li:first-child{border-top:0;padding-top:0}
+.wi{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(77,124,255,.16),rgba(231,189,120,.08));border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.wi svg{width:24px;height:24px}
+.wt h3{font-size:1.22rem;margin-bottom:6px}
+.wt p{color:var(--mut);font-size:.99rem;max-width:54ch}
+
+/* process — horizontal timeline */
+.timeline{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.timeline::before{content:"";position:absolute;top:25px;inset-inline:12.5% 12.5%;height:2px;background:linear-gradient(90deg,transparent,var(--line2),var(--line2),transparent)}
+.timeline li{position:relative;padding-inline:24px}
+.timeline li:first-child{padding-inline-start:0}
+.tn{width:52px;height:52px;border-radius:50%;border:1px solid var(--line2);background:var(--bg2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.02rem;color:var(--cobalt2);position:relative;z-index:1;margin-bottom:22px}
+.timeline h3{font-size:1.2rem;margin-bottom:8px}
+.timeline p{color:var(--mut);font-size:.95rem;max-width:30ch}
+@media(max-width:820px){
+  .whyx{grid-template-columns:1fr;gap:8px}.whyhead{position:static;margin-bottom:22px}
+  .whylist li:first-child{border-top:1px solid var(--line);padding-top:30px}
+  .timeline{grid-template-columns:1fr;gap:0}
+  .timeline::before{display:none}
+  .timeline li{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:0 0 30px}
+  .timeline li::after{content:"";position:absolute;top:54px;bottom:6px;inset-inline-start:25px;width:2px;background:var(--line)}
+  .timeline li:last-child::after{display:none}
+  .tn{margin-bottom:0}
+}
+
 /* services */
 .srv{background:linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent)}
 .sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -314,12 +346,17 @@ footer .cp{font-size:.82rem;color:var(--dim);border-top:1px solid var(--line);pa
 </div></div>
 
 <section id="why"><div class="wrap">
-  <div class="shead rv"><h2>هوية بصرية واضحة <span class="ac">تُقوّي علامتك</span></h2><p>تفاصيل مدروسة تجعل علامتك تُذكر وتتميّز عن غيرها.</p></div>
-  <div class="why">
-    <div class="wc rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>تراه قبل أن تدفع</h3><p>أُسلّمك معاينة حيّة كاملة على جوالك، تعتمدها قبل أي دفعة.</p></div>
-    <div class="wc rv d1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5L12 3Z"/></svg></div><h3>تصميم خاص بك</h3><p>هوية مفصّلة على نشاطك، لا قوالب جاهزة مكرّرة.</p></div>
-    <div class="wc rv d2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></svg></div><h3>حضور يُميّزك</h3><p>كل تفصيلة تعكس احترافية علامتك وتترك انطباعاً يدوم.</p></div>
-    <div class="wc rv d3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div><h3>سريع ومتوافق</h3><p>يفتح بسرعة، يعمل على كل جهاز، ومهيّأ لمحركات البحث.</p></div>
+  <div class="whyx">
+    <div class="whyhead rv">
+      <h2>هوية بصرية واضحة <span class="ac">تُقوّي علامتك</span></h2>
+      <p>تفاصيل مدروسة تجعل علامتك تُذكر وتتميّز عن غيرها.</p>
+    </div>
+    <ul class="whylist">
+      <li class="rv"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span><div class="wt"><h3>تراه قبل أن تدفع</h3><p>أُسلّمك معاينة حيّة كاملة على جوالك، تعتمدها قبل أي دفعة.</p></div></li>
+      <li class="rv d1"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5L12 3Z"/></svg></span><div class="wt"><h3>تصميم خاص بك</h3><p>هوية مفصّلة على نشاطك، لا قوالب جاهزة مكرّرة.</p></div></li>
+      <li class="rv d2"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></svg></span><div class="wt"><h3>حضور يُميّزك</h3><p>كل تفصيلة تعكس احترافية علامتك وتترك انطباعاً يدوم.</p></div></li>
+      <li class="rv d3"><span class="wi"><svg viewBox="0 0 24 24" fill="none" stroke="#7aa0ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8Z"/></svg></span><div class="wt"><h3>سريع ومتوافق</h3><p>يفتح بسرعة، يعمل على كل جهاز، ومهيّأ لمحركات البحث.</p></div></li>
+    </ul>
   </div>
 </div></section>
 
@@ -344,12 +381,12 @@ footer .cp{font-size:.82rem;color:var(--dim);border-top:1px solid var(--line);pa
 
 <section id="process" class="srv"><div class="wrap">
   <div class="shead rv"><h2>من أول رسالة <span class="ac">إلى موقع جاهز</span></h2><p>خطوات واضحة وسريعة، بلا مفاجآت.</p></div>
-  <div class="proc">
-    <div class="pstep rv"><h3>تواصل</h3><p>ترسل لي تفاصيل نشاطك وفكرتك، ونتفق على المحتوى والشكل المطلوب.</p></div>
-    <div class="pstep rv d1"><h3>تصميم</h3><p>أبني موقعك كاملاً بهوية خاصة خلال أيام معدودة.</p></div>
-    <div class="pstep rv d2"><h3>مراجعة</h3><p>أرسل لك رابطاً حيّاً تتصفّحه وتطلب أي تعديل قبل الاعتماد.</p></div>
-    <div class="pstep rv d3"><h3>إطلاق</h3><p>نربطه بنطاقك ونطلقه، ويستمر دعمي لك بعد التسليم.</p></div>
-  </div>
+  <ol class="timeline">
+    <li class="rv"><span class="tn en">01</span><h3>تواصل</h3><p>ترسل لي تفاصيل نشاطك وفكرتك، ونتفق على المحتوى والشكل.</p></li>
+    <li class="rv d1"><span class="tn en">02</span><h3>تصميم</h3><p>أبني موقعك كاملاً بهوية خاصة خلال أيام معدودة.</p></li>
+    <li class="rv d2"><span class="tn en">03</span><h3>مراجعة</h3><p>أرسل لك رابطاً حيّاً تتصفّحه وتطلب أي تعديل قبل الاعتماد.</p></li>
+    <li class="rv d3"><span class="tn en">04</span><h3>إطلاق</h3><p>نربطه بنطاقك ونطلقه، ويستمر دعمي بعد التسليم.</p></li>
+  </ol>
 </div></section>
 
 <section class="guar"><div class="wrap">
